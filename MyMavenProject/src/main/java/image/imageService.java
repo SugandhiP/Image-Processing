@@ -315,10 +315,11 @@ public class imageService extends imageGrpc.imageImplBase{
         File directory = new File("outputImages");
         File[] files = directory.listFiles();
 
-        for(File f: files) {
-            f.delete();
+        if(files.length!=0) {
+            for(File f: files) {
+                f.delete();
+            }
+            System.out.println("Server cleanup was successful.");
         }
-        System.out.println("Server cleanup was successful.");
-
     }
 }
