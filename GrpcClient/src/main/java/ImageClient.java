@@ -213,10 +213,11 @@ public class ImageClient {
     private static void cleanup(){
         File directory = new File("OutputFolder");
         File[] files = directory.listFiles();
-
-        for(File f: files) {
+        if(files.length!=0) {
+            for(File f: files) {
             f.delete();
+            }
+            System.out.println("Client output directory is cleaned.");
         }
-        System.out.println("Client output directory is cleaned.");
     }
 }
