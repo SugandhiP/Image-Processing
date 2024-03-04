@@ -132,7 +132,7 @@ public class ImageClient {
                     myOps.add(flip);
                     break;
                 case "rotate":
-                    System.out.println("Enter Rotate Percent (Eg. -100, +365, 200. RANGE -1000 to +1000):");
+                    System.out.println("Enter Rotate Percent (Eg. -100, +365, 200. RANGE -10000 to +10000):");
                     String rotate = kb.next();
                     valid = validateRotate(rotate);
                     if(valid != 0) {
@@ -202,7 +202,7 @@ public class ImageClient {
     }
 
     private static int validateRotate(String operation){
-        if (!(Integer.valueOf(operation) > -1000 && Integer.valueOf(operation) < 1000))
+        if (!(Integer.valueOf(operation) > -10000 && Integer.valueOf(operation) < 10000))
             return -1;
         else {
             System.out.println("Valid operation checked in validation: " + operation);
