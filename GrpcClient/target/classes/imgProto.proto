@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_package = "com.image.grpc";
+
+service image{
+  rpc imgProcess(ImageRequest) returns(ImageResponse);
+}
+
+message ImageRequest {
+  bytes imageData = 1;
+  string imageName = 2;
+  repeated string operations = 3;
+}
+
+/*message APIResponse {
+  string responsemessage = 1;
+  int32 responseCode = 2;
+}*/
+
+message ImageResponse {
+  bytes mainImageData = 1;
+  repeated bytes thumbnailImageData = 2;
+}
+
+
+message Empty{
+}
