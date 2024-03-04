@@ -1,4 +1,4 @@
-import com.yrrhelp.grpc.User;
+/*import com.yrrhelp.grpc.User;
 import com.yrrhelp.grpc.userGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -14,4 +14,4 @@ public class GrpcClient {
 
         System.out.println(response.getResponsemessage());
     }
-}
+}*/
